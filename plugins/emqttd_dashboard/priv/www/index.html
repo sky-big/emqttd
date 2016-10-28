@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dashboard</title>
+<meta name="keywords" content="Dashboard" />
+<meta name="description" content="Dashboard" />
+<meta name="author" content="emqtt.io" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="assets/images/favicon.ico"
+	type="image/x-icon" />
+
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/xenon-core.css">
+<link rel="stylesheet" href="assets/css/xenon-forms.css">
+<link rel="stylesheet" href="assets/css/xenon-components.css">
+<link rel="stylesheet" href="assets/css/xenon-skins.css">
+<link rel="stylesheet" href="assets/css/dashboard-custom.css">
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="page-body">
+
+	<div class="page-container">
+		<!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+		<!-- Add "fixed" class to make the sidebar fixed always to the browser viewport. -->
+		<!-- Adding class "toggle-others" will keep only one menu item open at a time. -->
+		<!-- Adding class "collapsed" collapse sidebar root elements and show only icons. -->
+		<div class="sidebar-menu toggle-others fixed">
+
+			<div class="sidebar-menu-inner">
+
+				<header class="logo-env">
+				<div class="logo">
+					<a href="/" class="logo-expanded"> 
+					    <div style="height:18px;">
+					    <i class="dash-icon dash-icon-logo" style="width: 40px; height: 40px;top: -10px;left:-8px;background-size: 100%;"></i>
+                        <span style="color: #4ba575;position: relative;top: -22px;left: -5px;font-size: 20px;font-weight: bold;">Dashboard</span>
+					    </div>
+					</a> <a href="/" class="logo-collapsed"> <img
+						src="assets/images/emqlogo-white.png" height="40" width="40" alt="" />
+					</a>
+				</div>
+
+				<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+				<div class="mobile-menu-toggle visible-xs">
+					<a href="#" data-toggle="user-info-menu"> <i class="glyphicon glyphicon-user"></i>
+					</a> <a href="#" data-toggle="mobile-menu"> <i class="glyphicon glyphicon-menu-hamburger"></i>
+					</a>
+				</div>
+				</header>
+
+				<ul id="main-menu" class="main-menu">
+					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+					<li module="overview"><a href="/#/overview"> <i
+							class="dash-icon dash-icon-overview"></i> <span class="title">Overview</span>
+					</a></li>
+					<li module="clients"><a href="/#/clients">
+							<i class="dash-icon dash-icon-clients"></i> <span class="title">Clients</span>
+					</a></li>
+					<li module="sessions"><a href="/#/sessions"> <i
+							class="dash-icon dash-icon-sessions"></i> <span class="title">Sessions</span>
+					</a></li>
+					<li module="topics"><a href="/#/topics"> <i
+							class="dash-icon dash-icon-topics"></i> <span class="title">Topics</span>
+					</a></li>
+					<li module="routes"><a href="/#/routes"> <i
+                            class="dash-icon dash-icon-routes"></i> <span class="title">Routes</span>
+                    </a></li>
+					<li module="subscriptions"><a href="/#/subscriptions"> <i
+							class="dash-icon dash-icon-subscriptions"></i> <span class="title">Subscriptions</span>
+					</a></li>
+					<li module="websocket"><a href="/#/websocket"> <i
+							class="dash-icon dash-icon-websocket"></i> <span class="title">Websocket</span>
+					</a></li>
+					<li module="users"><a href="/#/users"> <i
+							class="dash-icon dash-icon-admins"></i> <span class="title">Admins</span>
+					</a></li>
+					<li module="http_api"><a href="/#/http_api"> <i
+							class="dash-icon dash-icon-http-api"></i> <span class="title">HTTP API</span>
+					</a></li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="main-content">
+
+			<!-- User Info, Notifications and Menu Bar -->
+			<nav class="navbar user-info-navbar" role="navigation">
+			<!-- Left links for user info navbar -->
+			<ul class="user-info-menu left-links list-inline list-unstyled">
+
+				<li class="hidden-sm hidden-xs"><a href="#"
+					data-toggle="sidebar"> <i class="glyphicon glyphicon-th-list"></i>
+				</a></li>
+
+			</ul>
+
+
+			<!-- Right links for user info navbar -->
+			<ul class="user-info-menu right-links list-inline list-unstyled">
+
+				<li class="dropdown user-profile">
+				<a><img src="assets/images/user-4.png"
+						alt="user-image" class="img-circle img-inline userpic-32"
+						width="28" />
+				<span> <b id="current_user">Admin</b></span>
+				</a>
+				</li>
+				
+				<li>
+				<a href="javascript:;" id="logout"><span><i class="glyphicon glyphicon-lock"></i> Logout</span></a>
+				</li>
+
+			</ul>
+
+			</nav>
+			<div class="page-title" id="title_bar">
+
+                <!-- 
+				<div class="title-env">
+					<p class="description">Clients List</p>
+					<h1 class="title">Clients</h1>
+				</div>
+				 -->
+                <!--
+				<div class="breadcrumb-env">
+
+					<ol class="breadcrumb bc-1">
+						<li><a href="/#/overview"><i class="glyphicon glyphicon-home"></i>Overview</a>
+						</li>
+						<li class="active"><a href="/#/clients"><strong>Clients</strong></a>
+						</li>
+					</ol>
+
+				</div>
+                -->
+			</div>
+
+			<!-- context -->
+			<div id="context">
+				
+			</div>
+			
+			<!-- Main Footer -->
+            <footer class="main-footer sticky footer-type-1">
+            <div class="footer-inner">
+                <!-- Add your copyright text here -->
+                <div class="footer-text">
+                    &copy; 2012 -
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Powered by <strong> <a href="http://emqtt.io"
+                        target="_blank" title="emqtt">eMQTT.IO</a></strong>
+                </div>
+
+                <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+                <div class="go-up">
+                    <a href="#" rel="go-top"> <i class="fa-angle-up"></i>
+                    </a>
+                </div>
+            </div>
+            </footer>
+			
+		</div>
+
+	</div>
+
+	<!-- Bottom Scripts -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/TweenLite.min.js"></script>
+	<script src="assets/js/TweenMax.min.js"></script>
+	<script src="assets/js/toastr/toastr.min.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/xenon-toggles.js"></script>
+	<script src="assets/js/mqttws31.js"></script>
+	<script src="assets/js/dashboard-api.js"></script>
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/xenon-custom.js"></script>
+	<script src="assets/js/dashboard-custom.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			// 完整网址
+			//alert(document.URL);
+			//alert(document.location.href);
+			//alert(self.location.href);
+			//alert(parent.document.location);
+			// 当前域名
+			//alert(top.location.href);
+		    //alert(top.location.hostname);
+		    //alert(top.location.port);
+		    var config = {hostname : top.location.hostname,
+		    		port : top.location.port};
+			initWebPage(document.location.href, config);
+		});
+	</script>
+</body>
+</html>

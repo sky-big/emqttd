@@ -1,0 +1,263 @@
+<div class="row">
+	<div class="col-sm-6">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Connection</h3>
+			</div>
+			<div class="panel-body">
+
+				<form role="form">
+
+                    <div class="row">
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="host">Host:</label> <input type="text"
+                            class="form-control" id="host" placeholder="Host IP">
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="port">Port:</label> <input type="text"
+                            class="form-control" id="port"
+                            placeholder="Port">
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="client_id">Client ID:</label> <input type="text"
+                            class="form-control" id="client_id"
+                            placeholder="Client ID">
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="user_name">User Name:</label> <input type="text"
+                            class="form-control" id="user_name"
+                            placeholder="User Name">
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="password">Password:</label> <input type="password"
+                            class="form-control" id="password"
+                            placeholder="Password">
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="keep_alive">Keep Alive:</label> <input type="text"
+                            class="form-control" id="keep_alive"
+                            placeholder="Keep Alive">
+                    </div>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="1" id="clean_session" checked/>Clean Session 
+                    </label>
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success btn-single" id="connect_btn">Connect</button>
+                        <button type="button" class="btn btn-gray btn-single disabled" id="disconnect_btn">Disconnect</button>
+                    </div>
+                    <div class="form-group">
+                        <label class="cbr-inline">
+                            Current State: <strong id="connect_state" class="text-danger">DISCONNECT</strong>
+                        </label>
+                    </div>
+                    </div>
+                    
+                    </div>
+					
+
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-sm-6">
+	
+	<div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Receive Message</h3>
+            </div>
+            <div class="panel-body" id="receive_message" style="overflow: auto;height: 260px;">
+
+                
+
+            </div>
+        </div>
+	
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Subscription</h3>
+            </div>
+            <div class="panel-body">
+
+                <form role="form">
+
+                    <div class="row">
+                    
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="subscription">Subscription:</label> <input type="text"
+                            class="form-control" id="subscription"
+                            placeholder="Subscription" value="/World">
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="qos_2">QoS:</label>
+                        <select class="form-control" id="qos_2">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success btn-single" id="subscribe_btn">Subscribe</button>
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6">
+    
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Subscriptions List</h3>
+            </div>
+            <div class="panel-body" id="subscriptions_list" style="overflow: auto;height: 230px;">
+
+                
+
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Send Message</h3>
+            </div>
+            <div class="panel-body">
+
+                <form role="form">
+
+                    <div class="row">
+                    
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="topic">Topic:</label> <input type="text"
+                            class="form-control" id="topic"
+                            placeholder="Topic" value="/World">
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="message">Message:</label> <input type="text"
+                            class="form-control" id="message"
+                            placeholder="Message" value="Hello world!">
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="qos_3">QoS:</label>
+                        <select class="form-control" id="qos_3">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="1" id="retained" checked/>Retained 
+                    </label>
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+                    <div class="row">
+                    
+                    <div class="col-sm-12">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success btn-single" id="send_btn">Send</button>
+                    </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-6">
+    
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Send Message List</h3>
+            </div>
+            <div class="panel-body" id="send_message_list" style="overflow: auto;height: 230px;">
+
+                
+
+            </div>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,53 @@
+
+1.1.2-beta (2016-06-30)
+-----------------------
+
+Add shutdown stats to listeners api (PR #66)
+
+Process Leak when querying 'clients', 'sessions', 'topics', 'routes'... (#63)
+
+1.0-beta (2016-04-13)
+----------------------
+
+Tag 1.0
+
+0.17.1-beta (2016-03-22)
+------------------------
+
+Improve the table pagination.
+
+0.17.0-beta (2016-03-15)
+------------------------
+
+A New Theme Design
+
+Table Pagination Support
+
+0.16.0-beta (2016-02-10)
+-------------------------
+
+Licensed under the Apache, Version 2.0
+
+0.15.0-beta (2016-01-28)
+-------------------------
+
+Misc fix
+
+
+0.14.0-beta (2015-12-10)
+-------------------------
+
+Support to query subscriptions 
+
+Comment D3JS Topic tree for performance issue
+
+
+0.13.0-beta (2015-11-05)
+-------------------------
+
+Bugfix: emqttd-0.12.3 release: metrics are not right (#36)
+
+Bugfix: Overview page add new metrics (#35)
+
+Bugfix: No Overview broker informations on non-anonymous sessions (#33)
+

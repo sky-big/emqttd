@@ -1,0 +1,13 @@
+{application, emqttd_stomp,
+ [
+  {description, "Stomp Protocol Plugin for emqttd broker"},
+  {vsn, "1.1.2"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, {emqttd_stomp_app, []}},
+  {env, []}
+ ]}.

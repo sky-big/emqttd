@@ -1,0 +1,124 @@
+/**
+ * Apply your custom CSS here
+ */
+
+body {
+	
+}
+
+a {
+	
+}
+
+.table > thead > tr > td, .table > thead > tr > th {
+	border-bottom: 0px;
+}
+
+.dash-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 5px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dash-icon-logo {
+  background-image: url(../images/emqlogo-green.png);
+}
+
+.dash-icon-overview {
+  background-image: url(../images/overview_d.png);
+}
+.dash-icon-clients {
+  background-image: url(../images/clients_d.png);
+}
+.dash-icon-sessions {
+  background-image: url(../images/sessions_d.png);
+}
+.dash-icon-topics {
+  background-image: url(../images/topics_d.png);
+}
+.dash-icon-routes {
+  background-image: url(../images/routes_d.png);
+}
+.dash-icon-subscriptions {
+  background-image: url(../images/subscriptions_d.png);
+}
+.dash-icon-websocket {
+  background-image: url(../images/websocket_d.png);
+}
+.dash-icon-admins {
+  background-image: url(../images/admins_d.png);
+}
+.dash-icon-http-api {
+  background-image: url(../images/http_api_d.png);
+}
+
+.sidebar-menu .main-menu a:hover .dash-icon-overview {
+  background-image: url(../images/overview_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-clients {
+  background-image: url(../images/clients_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-sessions {
+  background-image: url(../images/sessions_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-topics {
+  background-image: url(../images/topics_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-routes {
+  background-image: url(../images/routes_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-subscriptions {
+  background-image: url(../images/subscriptions_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-websocket {
+  background-image: url(../images/websocket_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-admins {
+  background-image: url(../images/admins_h.png);
+}
+.sidebar-menu .main-menu a:hover .dash-icon-http-api {
+  background-image: url(../images/http_api_h.png);
+}
+
+.sidebar-menu .main-menu li.active > a .dash-icon-overview {
+  background-image: url(../images/overview_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-clients {
+  background-image: url(../images/clients_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-sessions {
+  background-image: url(../images/sessions_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-topics {
+  background-image: url(../images/topics_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-routes {
+  background-image: url(../images/routes_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-subscriptions {
+  background-image: url(../images/subscriptions_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-websocket {
+  background-image: url(../images/websocket_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-admins {
+  background-image: url(../images/admins_h.png);
+}
+.sidebar-menu .main-menu li.active > a .dash-icon-http-api {
+  background-image: url(../images/http_api_h.png);
+}
+
+footer.main-footer a {
+    color: #4ba575;
+}

@@ -1,0 +1,47 @@
+
+1.1.2 (2016-06-30)
+------------------
+
+Bump version to 1.1.2
+
+1.1 (2016-05-26)
+----------------
+
+Use parameter query to avoid SQL injection
+
+Support superuser query
+
+1.0 (2016-04-13)
+----------------
+
+Tag 1.0
+
+0.16.0 (2016-02-10)
+-------------------
+
+Licensed under the Apache, Version 2.0
+
+0.15.0-beta (2016-01-28)
+-------------------------
+
+Integrate with [ecpool library](https://github.com/emqtt/ecpool)
+
+Use emqttd_auth_mod:passwd_hash/2 api
+
+0.13.1-beta (2015-11-26)
+-------------------------
+
+Error using same query with latest update plugin (#5)
+
+0.13.0-beta (2015-11-05)
+-------------------------
+
+Auto reconnect to pgsql(#4)
+
+Support 'and', 'or' ACL Rule
+
+0.10.0-beta (2015-08-20)
+-------------------------
+
+First release with emqttd 0.10.0-beta
+

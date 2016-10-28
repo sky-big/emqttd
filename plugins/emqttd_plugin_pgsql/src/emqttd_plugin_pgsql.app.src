@@ -1,0 +1,16 @@
+{application, emqttd_plugin_pgsql,
+ [
+  {description, "emqttd PostgreSQL Plugin"},
+  {vsn, "1.1.2"},
+  {registered, []},
+  {modules, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  epgsql,
+                  ecpool
+                 ]},
+  {mod, { emqttd_plugin_pgsql_app, []}},
+  {env, []}
+ ]}.
+
